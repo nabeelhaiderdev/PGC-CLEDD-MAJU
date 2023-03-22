@@ -14,14 +14,6 @@ $author_id = $post->post_author;
 // Post ACf fields
 // Author profile image
 
-// Author profile image
-if (function_exists('get_field') ) {
-	$cledd_author_avatar = get_field('cledd_author_avatar', 'user_'.$author_id);
-}
-
-if(!$cledd_author_avatar){
-	$cledd_author_avatar =  get_avatar_url($author_id);
-}
 
 // Get author name with fallback to display name
  if ( get_the_author_meta( 'first_name', $author_id ) || get_the_author_meta( 'last_name', $author_id ) ) {
@@ -36,5 +28,6 @@ $cledd_post_tag = get_the_tags($pID);
  ?> <div class="post-box-meta d-flex justify-content-between">
 	<div class="post-date"><?php the_time( project_dtformat ); ?></div> <?php if($cledd_post_tag){ ?> <div
 		class="ac-post-cat"> <?php foreach ($cledd_post_tag as $category ) { ?> <a
-			href="<?php echo get_category_link($category); ?>"><?php echo $category->name; ?></a> <?php } ?> </div> <?php } ?>
+			href="<?php echo get_category_link($category); ?>"><?php echo $category->name; ?></a> <?php } ?> </div>
+	<?php } ?>
 </div>

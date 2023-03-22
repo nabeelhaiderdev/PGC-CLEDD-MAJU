@@ -53,10 +53,7 @@ if ( ! function_exists( 'glide_setup_function' ) ) {
 		register_nav_menus(
 			array(
 				'header-nav'   => __( 'Header Nav', 'cledd_td' ),
-				'footer-nav-one' => __( 'Footer Nav One', 'cledd_td' ),
-				'footer-nav-two' => __( 'Footer Nav Two', 'cledd_td' ),
-				'footer-nav-three' => __( 'Footer Nav Three', 'cledd_td' ),
-				'legal-nav' => __( 'Legal Nav', 'cledd_td' ),
+				'footer-nav' => __( 'Footer Nav', 'cledd_td' ),
 			)
 		);
 

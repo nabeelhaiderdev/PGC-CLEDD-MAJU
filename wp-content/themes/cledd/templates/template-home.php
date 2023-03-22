@@ -20,23 +20,53 @@ global $option_fields;
 global $pID;
 global $fields;
 
-$cledd_pagetitle = (isset($fields['cledd_pagetitle']) && $fields['cledd_pagetitle']!='' ) ? $fields['cledd_pagetitle'] : get_the_title();
+$cledd_thpo_title = (isset($fields['cledd_thpo_title']) && $fields['cledd_thpo_title']!='' ) ? $fields['cledd_thpo_title'] : get_the_title();
+$cledd_thpo_sub_title = ( isset( $fields['cledd_thpo_sub_title'] ) ) ? $fields['cledd_thpo_sub_title'] : null;
+$cledd_thpo_sub_button = ( isset( $fields['cledd_thpo_sub_button'] ) ) ? $fields['cledd_thpo_sub_button'] : null;
 
-?> <section id="hero-section" class="hero-section">
-	<!-- Hero Start -->
-	<div class="hero-single">
-		<div class="wrapper">
-			<h1><?php echo $cledd_pagetitle; ?></h1>
+?>
+<div class="header-banner">
+	<div class="banner-image">
+		<?php 
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail('full');
+			}
+			else { ?>
+		<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/img-banner.jpg"
+			alt="img description">
+		<?php } ?>
+	</div>
+	<div class="container banner-frame">
+		<div class="banner-body">
+			<h1><?php echo html_entity_decode($cledd_thpo_title); ?> </h1>
+			<?php if($cledd_thpo_sub_title){ ?>
+			<div class="tagline">
+				<p><?php echo $cledd_thpo_sub_title; ?> </p>
+			</div>
+			<?php } ?>
+
+			<?php if( $cledd_thpo_sub_button ) { ?>
+			<div class="btn-block">
+				<?php echo glide_acf_button( $cledd_thpo_sub_button, 'btn btn-primary' ); ?>
+			</div>
+			<?php } ?>
 		</div>
 	</div>
-	<!-- Hero End -->
-</section>
-<section id="page-section" class="page-section">
-	<!-- Content Start --> <?php while ( have_posts() ) { the_post();
-		//Include specific template for the content.
-		get_template_part( 'partials/content', 'page' );
+</div>
 
-	} ?> <div class="clear"></div>
-	<div class="ts-80"></div>
-	<!-- Content End -->
-</section> <?php get_footer(); ?>
+<!-- Main Area Start -->
+<main id="main-section" class="main-section main">
+
+
+	<section id="page-section" class="page-section">
+		<!-- Content Start -->
+		<?php while ( have_posts() ) { the_post();
+			//Include specific template for the content.
+			get_template_part( 'partials/content', 'page' );
+
+		} ?>
+
+		<div class="clear"></div>
+		<div class="ts-80"></div>
+		<!-- Content End -->
+	</section> <?php get_footer(); ?>

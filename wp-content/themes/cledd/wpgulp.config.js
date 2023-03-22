@@ -3,8 +3,8 @@
  */
 module.exports = {
 	// Project options.
-	projectName: 'CLEDD MAJU',
-	projectURL: 'http://locahost/cledd',
+	projectName: 'UCP Climate Change',
+	projectURL: 'http://localhost/ucp-climate-change/',
 	projectVersion: '1.0.0',
 
 	// Browser Sync.
@@ -23,7 +23,7 @@ module.exports = {
 	cssPath: 'assets/css/',
 
 	// Scripts.
-	jsSRC: [ '!assets/js/partials/', 'assets/js/partials/site-scripts.js' ],
+	jsSRC: [ 'assets/js/vendor/jquery.main.js', '!assets/js/partials/', 'assets/js/partials/site-scripts.js' ],
 	jsDestination: 'assets/js/',
 	jsFile: 'bundle',
 

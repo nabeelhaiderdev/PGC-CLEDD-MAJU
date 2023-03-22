@@ -194,5 +194,83 @@ function glide_theme_acf_init() {
 			)
 		);
 
+		// Register a block - Two Column Text
+		acf_register_block(
+			array(
+				'name'            => 'two-column-text',
+				'title'           => __( 'Two Column Text', 'cledd_td' ),
+				'description'     => __( 'A custom two column text block.', 'cledd_td' ),
+				'render_callback' => 'glide_acf_block_callback',
+				'category'        => 'glide-blocks',
+				'icon'            => 'columns',
+				'mode'            => 'edit',
+				'keywords'        => array( ),
+				'align'           => 'wide',
+				'supports'        => array(
+					'align' => false,
+				),
+				// 'example'         => array(
+				// 	'attributes' => array(
+				// 		'mode' => 'preview',
+				// 		'data' => array(
+				// 			'preview_image_help' => get_template_directory_uri() . '/assets/img/admin/default-block-preview.webp',
+				// 		),
+				// 	),
+				// ),
+			)
+		);
+
+		// Register a block - Workshops Summary
+		acf_register_block(
+			array(
+				'name'            => 'workshops-summary',
+				'title'           => __( 'Workshops Summary', 'cledd_td' ),
+				'description'     => __( 'A custom Workshops Summary block.', 'cledd_td' ),
+				'render_callback' => 'glide_acf_block_callback',
+				'category'        => 'glide-blocks',
+				'icon'            => 'editor-insertmore',
+				'mode'            => 'edit',
+				'keywords'        => array( ),
+				'align'           => 'wide',
+				'supports'        => array(
+					'align' => false,
+				),
+				// 'example'         => array(
+				// 	'attributes' => array(
+				// 		'mode' => 'preview',
+				// 		'data' => array(
+				// 			'preview_image_help' => get_template_directory_uri() . '/assets/img/admin/default-block-preview.webp',
+				// 		),
+				// 	),
+				// ),
+			)
+		);
+
+		// Register a block - Message Boxes
+		acf_register_block(
+			array(
+				'name'            => 'message-boxes',
+				'title'           => __( 'Message Boxes', 'cledd_td' ),
+				'description'     => __( 'A custom Message Boxes block.', 'cledd_td' ),
+				'render_callback' => 'glide_acf_block_callback',
+				'category'        => 'glide-blocks',
+				'icon'            => 'format-chat',
+				'mode'            => 'edit',
+				'keywords'        => array( ),
+				'align'           => 'wide',
+				'supports'        => array(
+					'align' => false,
+				),
+				// 'example'         => array(
+				// 	'attributes' => array(
+				// 		'mode' => 'preview',
+				// 		'data' => array(
+				// 			'preview_image_help' => get_template_directory_uri() . '/assets/img/admin/default-block-preview.webp',
+				// 		),
+				// 	),
+				// ),
+			)
+		);
+
 	}
 }
