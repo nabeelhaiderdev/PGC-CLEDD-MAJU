@@ -397,6 +397,7 @@ input {
 	span {
 		display: block;
 		font-size: 14px;
+		text-transform: lowercase;
 	}
 }
 
@@ -893,12 +894,18 @@ input {
 
 .testimonail-block .btn-block .btn {
 	min-height: 80px;
+	min-width: 260px;
 	display: inline-flex;
+	font-size: 18px;
 	text-align: left;
-	padding: 10px 35px;
+	padding: 10px 32px;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	flex-flow: column nowrap;
+}
+
+.testimonail-block:last-child .btn-block .btn {
+	align-items: flex-start;
 }
 
 .section.testimonials .testimonial-grid {
@@ -961,6 +968,7 @@ input {
 .testimonail-block .message-block p {
 	margin: 0 0 20px;
 	text-align: justify;
+	font-weight: 400;
 }
 
 .testimonail-block .message-block p:last-child {
@@ -1072,6 +1080,11 @@ input {
 	line-height: 1;
 	color: #fff;
 }
+
+.additional-info li:last-child .text {
+	text-transform: lowercase;
+}
+
 
 @media (max-width: 1199px) {
 
@@ -1591,7 +1604,8 @@ address {
 /* Section Workshops */
 .section-workshops {
 	position: relative;
-	padding: 120px 0;
+	// padding: 120px 0;
+	padding: 0 0 70px;
 	color: #2e2b70;
 
 	@media (max-width: 1199px) {
@@ -1621,7 +1635,8 @@ address {
 			display: block;
 		}
 
-		&:nth-child(even) {
+		&:nth-child(even),
+		&.image-at-right {
 			flex-flow: row-reverse nowrap;
 		}
 

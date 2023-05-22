@@ -33,7 +33,7 @@ $cledd_thpo_sub_button = ( isset( $fields['cledd_thpo_sub_button'] ) ) ? $fields
 			}
 			else { ?>
 		<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/img-banner.jpg"
-			alt="img description">
+			alt="<?php echo get_the_title(); ?>">
 		<?php } ?>
 	</div>
 	<div class="container banner-frame">

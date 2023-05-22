@@ -6,6 +6,7 @@
             "key": "field_627946d1c50e7",
             "label": "<h2 style=\"text-align:center;\"> Image Alongside Text <\/h2>",
             "name": "",
+            "aria-label": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_627946dfc50e8",
             "label": "Title",
             "name": "cledd_iat_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -42,6 +44,7 @@
             "key": "field_62794720c50e9",
             "label": "Expand for options",
             "name": "",
+            "aria-label": "",
             "type": "accordion",
             "instructions": "",
             "required": 0,
@@ -56,9 +59,78 @@
             "endpoint": 0
         },
         {
+            "key": "field_642139184ed3c",
+            "label": "Kicker",
+            "name": "cledd_iat_kicker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62794da70c37b",
+            "label": "Image Location",
+            "name": "cledd_iat_img_location",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "right": "Right"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_62794780c50ec",
+            "label": "Image",
+            "name": "cledd_iat_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "admin-portrait"
+        },
+        {
             "key": "field_62794734c50ea",
             "label": "Text",
             "name": "cledd_iat_text",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -76,9 +148,10 @@
             "wysiwyg_height": ""
         },
         {
-            "key": "field_6279476dc50eb",
-            "label": "Button",
-            "name": "cledd_iat_button",
+            "key": "field_64213b2adc2cf",
+            "label": "Link",
+            "name": "cledd_iat_link",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -88,70 +161,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
-        },
-        {
-            "key": "field_62794d860c37a",
-            "label": "Image Upload Instructions",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "<div class=\"upload-instructions\">\r\n\r\n<b>Recommended Size:<\/b> Minimum 580px by 620px (Regular Display) - Maximum 870px by 930px (Retina Display) - (width x height)<br \/>\r\n\r\n<b>Image Height:<\/b> Height of the image can vary slightly due to aspect ratio, but width of image must meet the recommended size.<br \/>\r\n\r\n<b>Resources:<\/b> Make sure to upload a compressed image in <i>.WEBP<\/i> image format. - <a href=\"https:\/\/image.online-convert.com\/convert-to-webp\" target=\"_blank\">Convert Images to WEBP<\/a> - <a href=\"https:\/\/tinypng.com\/\" target=\"_blank\">Compress WEBP Images<\/a>\r\n\r\n<\/div>",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_62794da70c37b",
-            "label": "Image Location",
-            "name": "cledd_iat_img_location",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "left": "Left",
-                "right": "Right"
-            },
-            "allow_null": 0,
-            "default_value": "right",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
-            "key": "field_62794780c50ec",
-            "label": "Image",
-            "name": "cledd_iat_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "admin-portrait",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "return_format": "url"
         }
     ],
     "location": [
@@ -172,5 +182,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652117155
+    "modified": 1679899452
 }
